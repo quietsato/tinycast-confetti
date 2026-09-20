@@ -1,0 +1,4 @@
+title = "Tinycast Confetti secret scanning"
+
+[extend]
+useDefault = true

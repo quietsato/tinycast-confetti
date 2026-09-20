@@ -1,0 +1,41 @@
+# Tinycast Confetti
+
+A Tinycast extension that throws native confetti across your displays. Inspired by the Confetti command in Raycast; independently implemented without Raycast code or assets.
+
+The overlay lets clicks pass through, leaves keyboard focus alone, and exits after 5.5 seconds. With macOS **Reduce motion** enabled, it shows a stationary arrangement with a short fade instead. No network requests, account, telemetry, or third-party runtime dependencies.
+
+## Build and install
+
+Requires macOS, Xcode Command Line Tools, and Tinycast with extension support. Node.js is needed only for tests. The build contains both Apple silicon and Intel code.
+
+```sh
+bash scripts/build.sh
+```
+
+In Tinycast, open **Settings → Extensions**, enable extensions, and choose **Install → Add from folder**. Select `dist/tinycast-confetti`. Search for **Confetti** in the launcher and press Return. A hotkey can be assigned in Tinycast's settings.
+
+The archive `dist/tinycast-confetti.tar.gz` contains the same installable folder. The helper uses an ad-hoc signature and is not notarized. Distribution through downloads may require normal macOS approval. Rebuilding locally avoids a downloaded executable.
+
+Remove it from Tinycast's Extensions settings to uninstall. There is no background service or separate application to remove.
+
+## Development
+
+```sh
+brew install gitleaks
+git config core.hooksPath .githooks
+bash scripts/build.sh
+bash scripts/test.sh
+npm run scan
+```
+
+`confetti.js` is already a CommonJS command, so no JavaScript bundler or package installation is required. `native/` contains the AppKit overlay and particle model. The helper also accepts `--version` and `--reduced-motion` for local checks.
+
+See [SECURITY.md](SECURITY.md) for repository safeguards. Generated builds and screenshots are excluded from Git. The npm package is marked private to prevent accidental npm publication; this is independent of GitHub repository visibility.
+
+## Compatibility
+
+Uses Tinycast's documented [built extension layout](https://tinycast.dev/docs/extensions/installing/) and `child_process.execFile` bridge. It does not modify Tinycast or require Raycast to be installed.
+
+## License
+
+MIT. Not affiliated with Tinycast or Raycast.

@@ -1,0 +1,26 @@
+{
+  "name": "tinycast-confetti",
+  "title": "Confetti",
+  "description": "Celebrate with native, desktop-wide confetti in Tinycast.",
+  "version": "1.0.0",
+  "author": "quietsato",
+  "license": "MIT",
+  "private": true,
+  "icon": "icon.svg",
+  "platforms": ["macOS"],
+  "categories": ["Fun"],
+  "commands": [
+    {
+      "name": "confetti",
+      "title": "Confetti",
+      "description": "Throw confetti across your displays.",
+      "mode": "no-view",
+      "keywords": ["celebrate", "party", "紙吹雪", "お祝い"]
+    }
+  ],
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "test": "bash scripts/test.sh",
+    "scan": "gitleaks git --redact && gitleaks dir --redact"
+  }
+}
