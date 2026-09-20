@@ -36,6 +36,8 @@ See [SECURITY.md](SECURITY.md) for repository safeguards. Generated builds and s
 
 Uses Tinycast's documented [built extension layout](https://tinycast.dev/docs/extensions/installing/) and `child_process.execFile` bridge. It does not modify Tinycast or require Raycast to be installed.
 
+Verified with Tinycast 0.9.8 on macOS 27 (Apple silicon): folder installation, launcher search, command execution, visible animation, and automatic process exit. The Intel slice is built and checked in CI but has not been run on Intel hardware. Particle tests cover the stationary reduced-motion layout.
+
 ## License
 
 MIT. Not affiliated with Tinycast or Raycast.

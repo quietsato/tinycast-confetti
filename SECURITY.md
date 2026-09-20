@@ -11,7 +11,7 @@ brew install gitleaks
 git config core.hooksPath .githooks
 ```
 
-The hook scans staged changes before commits. CI scans the working tree and complete Git history with the standard Gitleaks rules. Before making the repository public, run both scans again and review the tracked files and commit metadata. Use a GitHub noreply address for commits.
+The commit hook scans staged changes, and the push hook scans Git history before uploading. Both require Gitleaks to be installed. CI scans the working tree and complete Git history with the standard Gitleaks rules. Before making the repository public, run both scans again and review the tracked files and commit metadata. Use a GitHub noreply address for commits.
 
 CI has read-only repository permissions, does not retain checkout credentials, and does not need repository secrets. Native helpers are built locally with an ad-hoc signature; no signing identity or provisioning profile is stored here.
 
