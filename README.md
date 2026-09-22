@@ -6,10 +6,10 @@ The overlay lets clicks pass through, leaves keyboard focus alone, and exits aft
 
 ## Build and install
 
-Requires macOS, Xcode Command Line Tools, and TinyCast with extension support. Node.js is needed only for tests. The build contains both Apple silicon and Intel code.
+Requires macOS, Node.js with npm, Xcode Command Line Tools, and TinyCast with extension support. The build contains both Apple silicon and Intel code.
 
 ```sh
-bash scripts/build.sh
+npm run build
 ```
 
 In TinyCast, open **Settings → Extensions**, enable extensions, and choose **Install → Add from folder**. Select `dist/tinycast-confetti`. Search for **Confetti** in the launcher and press Return. A hotkey can be assigned in TinyCast's settings.
@@ -21,8 +21,8 @@ Remove it from TinyCast's Extensions settings to uninstall. There is no backgrou
 ## Development
 
 ```sh
-bash scripts/build.sh
-bash scripts/test.sh
+npm run build
+npm test
 ```
 
 `confetti.js` is already a CommonJS command, so no JavaScript bundler or package installation is required. `native/` contains the AppKit overlay and particle model. The helper also accepts `--version` and `--reduced-motion` for local checks.
