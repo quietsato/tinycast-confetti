@@ -70,7 +70,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             )
             panel.level = NSWindow.Level(rawValue: NSWindow.Level.statusBar.rawValue + 1)
             panel.backgroundColor = .clear
-            panel.title = "Tinycast Confetti"
+            panel.title = "TinyCast Confetti"
             panel.isOpaque = false
             panel.hasShadow = false
             panel.ignoresMouseEvents = true
@@ -100,7 +100,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
 let arguments = Array(CommandLine.arguments.dropFirst())
 if arguments == ["--version"] {
-    print("Tinycast Confetti 1.0.0")
+    print("TinyCast Confetti 1.0.0")
     exit(0)
 }
 guard arguments.isEmpty || arguments == ["--reduced-motion"] else {
