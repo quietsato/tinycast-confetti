@@ -7,7 +7,7 @@ xcrun swiftc native/Particles.swift tests/ParticlesTests.swift -o build/particle
 build/particle-tests
 helper=dist/tinycast-confetti/assets/Confetti.app
 test -x "$helper/Contents/MacOS/confetti"
-test "$("$helper/Contents/MacOS/confetti" --version)" = 'TinyCast Confetti 1.0.0'
+test "$("$helper/Contents/MacOS/confetti" --version)" = 'Tinycast Confetti 1.0.0'
 for arch in arm64 x86_64; do
   xcrun lipo "$helper/Contents/MacOS/confetti" -verify_arch "$arch"
 done

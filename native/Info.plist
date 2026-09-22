@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
   <key>CFBundleIdentifier</key><string>io.github.quietsato.tinycast-confetti</string>
-  <key>CFBundleName</key><string>TinyCast Confetti</string>
+  <key>CFBundleName</key><string>Tinycast Confetti</string>
   <key>CFBundleExecutable</key><string>confetti</string>
   <key>CFBundlePackageType</key><string>APPL</string>
   <key>CFBundleShortVersionString</key><string>1.0.0</string>
