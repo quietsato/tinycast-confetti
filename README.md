@@ -1,4 +1,4 @@
-# TinyCast Confetti
+# TinyCast Confetti 🎉
 
 A TinyCast extension that throws native confetti across your displays. Inspired by the Confetti command in Raycast; independently implemented without Raycast code or assets.
 
